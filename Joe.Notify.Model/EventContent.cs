@@ -7,15 +7,15 @@ namespace Joe.Notify.Model
 {
     public class EventContent
     {
-        public int Id
+        public EventContent()
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            this.Id = Guid.NewGuid().ToString();
+        }
+
+        public string Id
+        {
+            get;
+            private set;
         }
 
         public string Text

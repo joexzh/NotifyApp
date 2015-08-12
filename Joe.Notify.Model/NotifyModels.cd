@@ -2,9 +2,6 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Joe.Notify.Model.Event">
     <Position X="0.5" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
     <TypeIdentifier>
       <HashCode>AAACAIAEQgAAAEAAAEAgAAAAAgAgCAAAAQAFAAAAAAA=</HashCode>
       <FileName>Event.cs</FileName>
