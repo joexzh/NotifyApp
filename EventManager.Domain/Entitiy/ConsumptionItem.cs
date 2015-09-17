@@ -2,19 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using EventManager.Domain.ValueObject;
 
 namespace EventManager.Domain.Entitiy
 {
-    public class ConsumptionItem : IAggregateRoot
+    public class ConsumptionItem : IContentItem
     {
         public ConsumptionItem(User user)
         {
             this.Id = Guid.NewGuid().ToString();
-            this.User = user;
+            this.Key = user;
+
         }
 
         public string Id { get; private set; }
-        public User User { get; private set; }
-        public decimal Amount { get; set; }
+        public object Key { get; private set; }
+        public object value { get; set; }
+        public User Author { get; private set; }
+        public DateTime? CreateDate { get; private set; }
+        public ItemStatus Status { get; private set; }
+
     }
 }

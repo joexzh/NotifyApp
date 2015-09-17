@@ -2,36 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace EventManager.Domain.Entitiy
+namespace Joe.Notify.Model
 {
-    class ConsumptionContent : EventContent<ConsumptionItem>
+    public class EventOperation : IEventOperation
     {
-        public ConsumptionContent()
+        public int Id
         {
-            
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
 
-        public override object Remark
+
+        public string Name
         {
             get
             {
                 throw new NotImplementedException();
             }
-
             set
             {
                 throw new NotImplementedException();
             }
         }
 
-        public override object Summary
+        public void Operate()
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
+            throw new NotImplementedException();
         }
+
     }
 }
