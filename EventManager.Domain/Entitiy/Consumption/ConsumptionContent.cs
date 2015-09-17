@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventManager.Domain.Entitiy
+namespace EventManager.Domain.Entitiy.Consumption
 {
     class ConsumptionContent : EventContent<ConsumptionItem>
     {
         public ConsumptionContent()
         {
-            
+
         }
 
         public override object Remark
@@ -30,7 +30,7 @@ namespace EventManager.Domain.Entitiy
         {
             get
             {
-                throw new NotImplementedException();
+                return new ConsumptionSummary(this.ContentItems);
             }
         }
     }

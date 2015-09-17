@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventManager.Domain.Entitiy
+namespace EventManager.Domain.Entitiy.Text
 {
     public class TextContent : EventContent
     {

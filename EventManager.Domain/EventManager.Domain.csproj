@@ -40,10 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entitiy\ConsumptionContent.cs" />
-    <Compile Include="Entitiy\ConsumptionItem.cs" />
+    <Compile Include="Entitiy\Consumption\ConsumptionContent.cs" />
+    <Compile Include="Entitiy\Consumption\ConsumptionItem.cs" />
+    <Compile Include="Entitiy\Consumption\ConsumptionSummary.cs" />
     <Compile Include="Entitiy\Event.cs" />
-    <Compile Include="Entitiy\TextContent.cs" />
+    <Compile Include="Entitiy\Text\TextContent.cs" />
+    <Compile Include="Entitiy\Text\TextItem.cs" />
     <Compile Include="Entitiy\VotingItem.cs" />
     <Compile Include="Entitiy\VoteContent.cs" />
     <Compile Include="EventContent.cs" />

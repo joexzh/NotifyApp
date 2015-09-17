@@ -14,6 +14,7 @@ namespace EventManager.Domain
         object value { get; }
         User Author { get; }
         DateTime? CreateDate { get; }
+        DateTime? ModifyDate { get; }
         ItemStatus Status { get; }
     }
 }

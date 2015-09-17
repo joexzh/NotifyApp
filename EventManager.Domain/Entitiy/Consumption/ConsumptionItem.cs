@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using EventManager.Domain.ValueObject;
 
-namespace EventManager.Domain.Entitiy
+namespace EventManager.Domain.Entitiy.Consumption
 {
     public class ConsumptionItem : IContentItem
     {
@@ -21,6 +21,6 @@ namespace EventManager.Domain.Entitiy
         public User Author { get; private set; }
         public DateTime? CreateDate { get; private set; }
         public ItemStatus Status { get; private set; }
-
+        public DateTime? ModifyDate { get; private set; }
     }
 }
