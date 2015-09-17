@@ -16,8 +16,8 @@ namespace EventManager.Domain
             this.ContentItems = new List<IItem>();
         }
 
-        public ICollection<IItem> ContentItems { get; private set; }
-        public string Id { get; private set; }
+        public ICollection<IItem> ContentItems { get; protected set; }
+        public string Id { get; protected set; }
         public abstract object Remark { get; set; }
         public abstract object Summary { get; }
     }

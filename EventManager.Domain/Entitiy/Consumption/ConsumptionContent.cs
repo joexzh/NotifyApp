@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventManager.Domain.Entitiy.Consumption
 {
-    class ConsumptionContent : EventContent<ConsumptionItem>
+    class ConsumptionContent : EventContent<ConsumptionItem>, IEventContent<ConsumptionItem>
     {
         public ConsumptionContent()
         {

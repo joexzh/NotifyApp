@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventManager.Domain.Entitiy.Text
+namespace EventManager.Domain.Entitiy.Vote
 {
-    public class TextContent : EventContent<TextItem>, IEventContent<TextItem>
+    public class VoteContent : EventContent<VoteItem>, IEventContent<VoteItem>
     {
-        public TextContent()
+        public VoteContent()
         {
-            this.ContentItems = new List<TextItem>();
+            this.ContentItems = new List<VoteItem>();
         }
-
 
         public override object Remark
         {
@@ -28,8 +27,7 @@ namespace EventManager.Domain.Entitiy.Text
 
         public override object Summary
         {
-            get { return new TextSummary(this.ContentItems); }
+            get { throw new NotImplementedException(); }
         }
-
     }
 }
