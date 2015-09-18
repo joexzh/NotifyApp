@@ -10,24 +10,14 @@ namespace EventManager.Domain.Entitiy.Vote
     {
         public VoteContent()
         {
-            this.ContentItems = new List<VoteItem>();
         }
 
-        public override object Remark
+        public override IContentSummary ContentSummary
         {
             get
             {
-                throw new NotImplementedException();
+                return new VoteSummary(this.ContentItems);
             }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override object Summary
-        {
-            get { throw new NotImplementedException(); }
         }
     }
 }

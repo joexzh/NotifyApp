@@ -10,11 +10,9 @@ namespace EventManager.Domain
 {
     public interface IContentItem : IAggregateRoot
     {
-        object Key { get; }
-        object value { get; }
-        User Author { get; }
         DateTime? CreateDate { get; }
-        DateTime? ModifyDate { get; }
+        DateTime? ModifiedDate { get; }
         ItemStatus Status { get; }
+        void SetModifiedDate();
     }
 }

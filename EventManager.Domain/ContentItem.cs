@@ -14,13 +14,14 @@ namespace EventManager.Domain
             this.Status = ValueObject.ItemStatus.Undone;
             this.CreateDate = DateTime.Now;
         }
-
-        public virtual object Key { get; protected set; }
-        public virtual object Value { get; protected set; }
-        public virtual Entitiy.User Author { get; protected set; }
         public virtual DateTime? CreateDate { get; protected set; }
-        public virtual DateTime? ModifyDate { get; protected set; }
+        public virtual DateTime? ModifiedDate { get; protected set; }
         public virtual ValueObject.ItemStatus Status { get; protected set; }
         public virtual string Id { get; protected set; }
+
+        public void SetModifiedDate()
+        {
+            this.ModifiedDate = DateTime.Now;
+        }
     }
 }

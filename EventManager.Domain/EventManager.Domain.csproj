@@ -54,6 +54,7 @@
     <Compile Include="Entitiy\Vote\VoteSummary.cs" />
     <Compile Include="EventContent.cs" />
     <Compile Include="IContentItem.cs" />
+    <Compile Include="IContentSummary.cs" />
     <Compile Include="Lib\EventContentFactory.cs" />
     <Compile Include="ValueObject\EventStatus.cs" />
     <Compile Include="ValueObject\EventType.cs" />

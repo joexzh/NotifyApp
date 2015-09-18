@@ -6,27 +6,14 @@ using System.Threading.Tasks;
 
 namespace EventManager.Domain.Entitiy.Consumption
 {
-    class ConsumptionContent : EventContent<ConsumptionItem>, IEventContent<ConsumptionItem>
+    public class ConsumptionContent : EventContent<ConsumptionItem>, IEventContent<ConsumptionItem>
     {
         public ConsumptionContent()
         {
 
         }
 
-        public override object Remark
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override object Summary
+        public override IContentSummary ContentSummary
         {
             get
             {

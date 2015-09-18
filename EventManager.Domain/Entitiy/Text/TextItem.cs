@@ -9,14 +9,11 @@ namespace EventManager.Domain.Entitiy.Text
 {
     public class TextItem : ContentItem, IContentItem
     {
-        public TextItem(User user)
-            : base()
+        public TextItem(User author)
         {
-            this.Author = user;
+            this.Author = author;
         }
         public User Author { get; private set; }
-        public object Key { get; set; }
-        public DateTime? ModifyDate { get; private set; }
-        public object value { get; set; }
+        public string Text { get; set; }
     }
 }

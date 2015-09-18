@@ -10,17 +10,21 @@ namespace EventManager.Domain.Entitiy.Vote
         //TODO: should use distribute lock
         private object inCreateLock = new object();
 
-        public VoteItem()
+        public VoteItem(string name)
         {
-            this.Value = 0;
+            this.Name = name;
+            this.Count = 0;
         }
 
         public void InCreateCount()
         {
             lock (inCreateLock)
             {
-                Value = (int)Value + 1;
+                Count++;
             }
         }
+
+        public string Name { get; set; }
+        public int Count { get; private set; }
     }
 }

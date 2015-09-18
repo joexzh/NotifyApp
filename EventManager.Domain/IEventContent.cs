@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace EventManager.Domain
 {
-    public interface IEventContent<IItem> : IAggregateRoot
-        where IItem : IContentItem
+    public interface IEventContent<TItem> : IAggregateRoot
+        where TItem : IContentItem
     {
-        object Remark { get; }
-        object Summary { get; }
-        ICollection<IItem> ContentItems { get; }
+        ICollection<TItem> ContentItems { get; }
+        void AddItem(TItem item);
+        void RemoveItem(TItem item);
+        IContentSummary ContentSummary { get; }
     }
 }

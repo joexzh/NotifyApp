@@ -8,15 +8,13 @@ namespace EventManager.Domain.Entitiy.Consumption
 {
     public class ConsumptionItem : ContentItem, IContentItem
     {
-        public ConsumptionItem(User user)
-            : base()
+        public ConsumptionItem(User consumer)
         {
-            this.Key = user;
+            this.Consumer = consumer;
         }
 
-        public object Key { get; private set; }
-        public object value { get; set; }
-        public User Author { get; private set; }
-        public DateTime? ModifyDate { get; private set; }
+        public User Consumer { get; private set; }
+        public decimal Cost { get; set; }
+
     }
 }

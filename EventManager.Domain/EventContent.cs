@@ -7,18 +7,29 @@ using System.Threading.Tasks;
 
 namespace EventManager.Domain
 {
-    public abstract class EventContent<IItem> : IEventContent<IItem>
-        where IItem : IContentItem
+    public abstract class EventContent<TItem> : IEventContent<TItem>
+        where TItem : IContentItem
     {
         public EventContent()
         {
             this.Id = Guid.NewGuid().ToString();
-            this.ContentItems = new List<IItem>();
+            this.ContentItems = new List<TItem>();
         }
 
-        public ICollection<IItem> ContentItems { get; protected set; }
-        public string Id { get; protected set; }
-        public abstract object Remark { get; set; }
-        public abstract object Summary { get; }
+        public virtual ICollection<TItem> ContentItems { get; protected set; }
+
+        public virtual string Id { get; protected set; }
+        
+        public virtual IContentSummary ContentSummary { get; }
+
+        public virtual void AddItem(TItem item)
+        {
+            this.ContentItems.Add(item);
+        }
+
+        public virtual void RemoveItem(TItem item)
+        {
+            this.ContentItems.Remove(item);
+        }
     }
 }

@@ -103,7 +103,6 @@ namespace EventManager.Domain.Entity
         {
         
         }
-
         #endregion
     }
 }

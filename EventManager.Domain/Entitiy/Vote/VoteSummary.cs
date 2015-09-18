@@ -6,17 +6,15 @@ using System.Threading.Tasks;
 
 namespace EventManager.Domain.Entitiy.Vote
 {
-    public class VoteSummary
+    public class VoteSummary : IContentSummary
     {
         public VoteSummary(ICollection<VoteItem> voteItems)
         {
-            this.VoteItems = voteItems;
             this.Total = voteItems.Count;
-            this.VoteCount = voteItems.Sum(v => (int)v.Value);
+            this.VoteCount = voteItems.Sum(v => v.Count);
         }
 
-        public ICollection<VoteItem> VoteItems { get; private set; }
-        public int VoteCount { get; set; }
-        public int Total { get; set; }
+        public int VoteCount { get; private set; }
+        public int Total { get; private set; }
     }
 }

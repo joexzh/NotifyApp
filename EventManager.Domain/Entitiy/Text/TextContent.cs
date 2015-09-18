@@ -10,25 +10,15 @@ namespace EventManager.Domain.Entitiy.Text
     {
         public TextContent()
         {
-            this.ContentItems = new List<TextItem>();
+
         }
 
-
-        public override object Remark
+        public override IContentSummary ContentSummary
         {
             get
             {
-                throw new NotImplementedException();
+                return new TextSummary(this.ContentItems);
             }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override object Summary
-        {
-            get { return new TextSummary(this.ContentItems); }
         }
 
     }

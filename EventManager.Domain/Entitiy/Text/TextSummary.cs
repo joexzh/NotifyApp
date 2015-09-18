@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventManager.Domain.Entitiy.Text
 {
-    public class TextSummary
+    public class TextSummary : IContentSummary
     {
         public TextSummary(ICollection<TextItem> textItems)
         {
